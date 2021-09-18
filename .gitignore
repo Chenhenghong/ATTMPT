@@ -1,0 +1,4 @@
+# ignore all generated csv files
+*.csv
+# ignore python files for usage test
+dataFrameUsageTest.py
