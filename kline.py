@@ -45,8 +45,8 @@ def main():
     # The earilist trading data of symbol BTC/USDT on Binance is 2017-08-17 04:00 AM (GMT + 0)
     # Historic data for training : 2017-08-18 to 2020-08-01
     # Historic data for benchmark : 2020-08-01 to 2021-09-18 (can be updated later)
-    baseline_start_sec = int(datetime(2017, 8, 18, 0, 0, 0).timestamp())
-    baseline_end_sec = int(datetime(2020, 8, 1, 0, 0, 0).timestamp())
+    baseline_start_sec = int(datetime(2020, 8, 1, 0, 0, 0).timestamp())
+    baseline_end_sec = int(datetime(2021, 9, 18, 0, 0, 0).timestamp())
     df = pd.DataFrame([])
 
     dt_index_sec = baseline_start_sec
@@ -70,7 +70,7 @@ def main():
             print(convert_unix_time_in_mills_to_date(dt_index_sec * 1000))
             request_count = 0
 
-    write_into_csv(df, '2017_to_2020_Aug.csv')
+    write_into_csv(df, '2020_Aug_to_2021.csv')
 
 if __name__ == '__main__':
     main()
